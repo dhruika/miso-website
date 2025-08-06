@@ -1,62 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Miso</title>
   <meta name="description" content="Reach out to Miso for personalized gift orders or collaborations.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="footer.css" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
     }
   </style>
 </head>
+
 <body class="flex flex-col min-h-screen bg-white text-[#2D2D5D]">
 
- 
 
- <!-- Navbar -->
-<header class="sticky top-0 z-40 bg-white shadow-md">
-  <div class="max-w-7xl mx-auto px-6 md:px-10 py-3 flex justify-between items-center">
-    <!-- Logo -->
-    <a href="index.html" class="flex items-center space-x-2">
-      <img src="./assets/images/miso-logo.png" alt="Miso Logo" class="h-10 w-auto">
-      <span class="text-2xl font-bold text-pink-500 hidden sm:inline">Miso</span>
-    </a>
 
-    <!-- Navbar -->
-    <nav class="hidden md:flex gap-6 text-gray-800 font-semibold">
-      <a href="index.html" class="hover:text-pink-500 transition">Home</a>
-      <a href="about.html" class="hover:text-pink-500 transition">About</a>
-      <a href="products.html" class="hover:text-pink-500 transition">Products</a>
-      <a href="blog.html" class="hover:text-pink-500 transition">Blog</a>
-      <a href="contact.html" class="hover:text-pink-500 transition">Contact</a>
-    </nav>
-  </div>
-</header>
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="./assets/images/miso-logo.png" alt="Miso Logo" class="h-10 w-auto">
+        <span class="text-2xl font-bold text-pink-500 hidden sm:inline">Miso</span>
+      </a>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="menu-toggle" class="md:hidden text-3xl text-pink-500 focus:outline-none">
+        &#9776;
+      </button>
+
+      <!-- Navbar Links -->
+      <nav id="menu"
+        class="hidden md:flex md:gap-6 absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none p-4 md:p-0 flex-col md:flex-row text-gray-800 font-semibold z-50">
+        <a href="index.html" class="hover:text-pink-500 transition block py-2">Home</a>
+        <a href="about.html" class="hover:text-pink-500 transition block py-2">About</a>
+        <a href="products.html" class="hover:text-pink-500 transition block py-2">Products</a>
+        <a href="blog.html" class="hover:text-pink-500 transition block py-2">Blog</a>
+        <a href="contact.html" class="hover:text-pink-500 transition block py-2">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
 
   <!-- CONTACT SECTION -->
   <section class="px-6 py-16 max-w-2xl mx-auto text-center">
     <h1 class="text-3xl font-bold mb-4">Send Us a Message</h1>
     <p class="text-gray-600 mb-8">Have a question or want to order a custom gift? We'd love to hear from you!</p>
-    
+
     <form class="space-y-6">
       <div>
         <label class="block text-left font-medium mb-1">Name</label>
-        <input type="text" placeholder="Your name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#A066F8]">
+        <input type="text" placeholder="Your name"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#A066F8]">
       </div>
       <div>
         <label class="block text-left font-medium mb-1">Email</label>
-        <input type="email" placeholder="you@example.com" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#A066F8]">
+        <input type="email" placeholder="you@example.com"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#A066F8]">
       </div>
       <div>
         <label class="block text-left font-medium mb-1">Message</label>
-        <textarea rows="5" placeholder="Your message..." class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#A066F8]"></textarea>
+        <textarea rows="5" placeholder="Your message..."
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#A066F8]"></textarea>
       </div>
-      <button type="submit" class="bg-[#A066F8] text-white font-semibold px-6 py-2 rounded-full hover:bg-[#8b4ae2] transition-all">
+      <button type="submit"
+        class="bg-[#A066F8] text-white font-semibold px-6 py-2 rounded-full hover:bg-[#8b4ae2] transition-all">
         Send Message
       </button>
     </form>
@@ -65,16 +89,136 @@
       <p class="text-lg font-semibold mb-2">Or contact us directly:</p>
       <div class="flex flex-col items-center gap-3 text-sm text-gray-600">
         <a href="https://wa.me/919119733531" target="_blank" class="hover:underline">📱 WhatsApp: +91 9119733531</a>
-        <a href="https://www.instagram.com/miso__by_arin/" target="_blank" class="hover:underline">📷 Instagram: @miso__by_arin</a>
+        <a href="https://www.instagram.com/miso__by_arin/" target="_blank" class="hover:underline">📷 Instagram:
+          @miso__by_arin</a>
         <a href="mailto:misogifts@gmail.com" class="hover:underline">✉️ Email: misogifts@gmail.com</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-<footer class="text-center text-sm py-6 bg-gradient-to-r from-[#F8A3D8] via-[#D1C4E9] to-[#A066F8] text-gray-900 font-semibold">
-  <p>&copy; 2025 Miso by Arin. All rights reserved.</p>
-</footer>
+  <footer class="footer">
+    <!-- Decorative elements -->
+    <div class="decorative-overlay">
+      <div class="decorative-element decorative-1"></div>
+      <div class="decorative-element decorative-2"></div>
+      <div class="decorative-element decorative-3"></div>
+      <div class="decorative-element decorative-4"></div>
+    </div>
+
+    <div class="footer-container">
+      <!-- Main footer content -->
+      <div class="footer-grid">
+        <!-- Brand section -->
+        <div class="brand-section">
+          <div class="brand-header">
+            <div class="brand-icon">
+              <i data-lucide="heart"></i>
+            </div>
+            <h3 class="brand-title">Miso</h3>
+          </div>
+          <p class="brand-description">
+            Creating heartfelt, personalized gifts that turn your imagination into cherished memories.
+            Every piece is crafted with love and attention to detail.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Follow us on Instagram">
+              <i data-lucide="instagram"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Follow us on Facebook">
+              <i data-lucide="facebook"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Follow us on Twitter">
+              <i data-lucide="twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h4 class="column-title">Quick Links</h4>
+          <ul class="link-list">
+            <li><a href="#" class="footer-link">Home</a></li>
+            <li><a href="#" class="footer-link">About Us</a></li>
+            <li><a href="#" class="footer-link">Products</a></li>
+            <li><a href="#" class="footer-link">Custom Orders</a></li>
+            <li><a href="#" class="footer-link">Gift Cards</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-column">
+          <h4 class="column-title">Categories</h4>
+          <ul class="link-list">
+            <li><a href="#" class="footer-link">Personalized Frames</a></li>
+            <li><a href="#" class="footer-link">Custom Jewelry</a></li>
+            <li><a href="#" class="footer-link">Photo Books</a></li>
+            <li><a href="#" class="footer-link">Wall Art</a></li>
+            <li><a href="#" class="footer-link">Anniversary Gifts</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-column">
+          <h4 class="column-title">Contact Us</h4>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i data-lucide="map-pin"></i>
+              <span>123 Creativity Street, Art District, NY 10001</span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="phone"></i>
+              <span>+1 (555) 123-MISO</span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="mail"></i>
+              <span>hello@miso.gifts</span>
+            </div>
+          </div>
+
+          <!-- Newsletter signup -->
+          <div class="newsletter">
+            <h5 class="newsletter-title">Stay Updated</h5>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Your email" class="newsletter-input">
+              <button class="newsletter-button">
+                <i data-lucide="mail"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom section -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <div class="footer-legal">
+            <p>&copy; 2024 Miso. All rights reserved.</p>
+            <div class="legal-links">
+              <a href="#" class="legal-link">Privacy Policy</a>
+              <a href="#" class="legal-link">Terms of Service</a>
+              <a href="#" class="legal-link">Cookie Policy</a>
+            </div>
+          </div>
+          <div class="footer-credit">
+            <span>Made with</span>
+            <i data-lucide="heart" class="heart-icon"></i>
+            <span>for gift lovers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Add this script before closing </body> tag for Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+
+  <!--Footer -->
+
 
 </body>
+
 </html>
